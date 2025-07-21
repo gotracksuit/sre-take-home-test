@@ -38,34 +38,36 @@ command that's right for you.
 
 <!-- deno-fmt-ignore-end -->
 
-This repo was developed against Deno 2.4.2; it depends on bundling features
-introduced in Deno 2.4.
+This repo was developed against Deno 2.4.2.
 
 ## Common tasks
 
 Most of the commands you'll need are provided by the Deno toolchain. You can run
 tasks either from the repo root or within each package
 
-### Running client and server
+### Building the server
 
 ```sh
-deno task dev
+cd server
+deno task build
+```
+
+This is set up to output an x86_64 Linux ELF at `server/build/server`. You can
+override the target architecture if necessary by setting the `ARCH` environment
+variable; [see the docs here](https://docs.deno.com/runtime/reference/cli/compile/#supported-targets) for possible values.
+
+### Building the frontend
+
+While you don't have to worry too much about it for this exercise, you might
+want to try building the frontend:
+
+```sh
+cd client
+deno task build
 ```
 
 ### Typechecking
 
 ```sh
 deno check .
-```
-
-### Linting
-
-```sh
-deno lint
-```
-
-### Formatting
-
-```
-deno fmt
 ```

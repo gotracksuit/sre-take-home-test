@@ -13,7 +13,7 @@ const env = {
 export default defineConfig({
   root: "./src",
   build: {
-    outDir: "./dist",
+    outDir: "../build",
     emptyOutDir: true,
   },
   plugins: [react(), deno()],
