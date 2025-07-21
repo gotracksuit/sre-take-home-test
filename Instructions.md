@@ -6,16 +6,16 @@ shouldn't take very long — if it takes more than a few hours you're
 over-thinking it!
 
 <!-- deno-fmt-ignore-start -->
-> [!Note] 
+> [!Note]
 > This task is meant to give us something to talk over in your technical
 > interview. It should feel similar to the kind of day-to-day work you're used
-> to doing. We're not trying to trick you with something that requires fancy
-> algorithms to solve.
+> to doing. We're not trying to trick you with something that requires anything
+> fancy to solve.
 <!-- deno-fmt-ignore-end -->
 
 ## Background
 
-Imagine you are a developer at a promising startup called Suit Tracker Inc. Here
+Imagine you are an SRE at a promising startup called Suit Tracker Inc. Here
 at Suit Tracker, we have a huge network of well-paid interns that hang out at
 malls and note down what people are wearing out there in the wild. We then get
 our data science team to tell us what it all means.
@@ -43,28 +43,34 @@ taking our business to the next level.
 ## The Task
 
 One of our top developers, Chuggs, has been working on it. But we've just found
-out they were injured in a terrible interview accident, and we need your help to
-get the project over the line.
+out they were injured in a terrible interview accident, and they were unable to
+ship the new service they've been working on. We need your help to get the
+project over the line.
 
 Before they went under for surgery, Chuggs told us the work was nearly complete
-and everything done so far is pretty much flawless. They just had to write two
-more endpoints for working with insights — one to create an insight, and another
-to delete an insight — and hook those up to their frontend.
+and everything done so far is pretty much flawless. Another developer will be
+picking up the remaining work, but in the meantime, we need to deploy what we
+have.
 
 So, we need you to:
 
-1. Complete those two unfinished endpoints
+1. Dockerise the backend application for deployment
 
-2. Complete the missing frontend integrations with those new endpoints
+2. Tell us what we need to get the frontend application accessible from the web.
 
-3. Fix any bug Chuggs might have missed
+3. Stab out a CI pipeline that shows how shipping the apps in this codebase
+   should work.
 
-4. Read through and understand the implementation pretty well, since you'll be
-   maintaining this code
+Don't worry about deploying to real infra--just get something credible in place
+we can talk about.
 
-Do it for Chuggs.
+Finally, while Chuggs is definitely a 100x developer thanks to AI, they haven't
+had a chance to flesh out the monitoring and observability for this application.
 
-## Extra For Experts (or Seniors)
+- What do you think we need in place, and are there any changes to the
+  implementation we might need to make to accomplish this?
+
+## Extra For Experts
 
 Our eccentric American investor tells us that we'll unlock a huge funding
 milestone if we get this Insights feature working--they will personally
@@ -74,6 +80,7 @@ funding round if we can pull this off.
 We're confident you've got this, so we're already planning to scale our
 engineering team at Suit Tracker from ~~5~~ 4 engineers to 20.
 
-In your opinion, what are we missing that would enable us to scale the team out
-and collaborate on this codebase more effectively? Have a think and be prepared
-to chat about your thoughts in the interview.
+In your opinion:
+
+- what kinds of things will SRE need to put in place for us to scale the team
+  out and collaborate on this product more effectively?
