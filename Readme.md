@@ -38,7 +38,8 @@ command that's right for you.
 
 <!-- deno-fmt-ignore-end -->
 
-This repo was developed against Deno 2.1.2.
+This repo was developed against Deno 2.4.2; it depends on bundling features
+introduced in Deno 2.4.
 
 ## Common tasks
 
