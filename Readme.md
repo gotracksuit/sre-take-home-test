@@ -18,20 +18,23 @@ user as a collaborator, and share the repo link with the talent manager.
 <!-- Link definitions -->
 
 [DenoInstall]: https://docs.deno.com/runtime/getting_started/installation/
-[Flake]: ./flake.nix
+[mise.toml]: ./mise.toml
 [Instructions]: ./Instructions.md
 
 ## Setup
 
-Install Deno 2 using your preferred method--typically this would be your
-system's package manager. See [Deno's installation instructions][DenoInstall] to
-find the command that's right for you.
+Install Deno 2.4 using your preferred method--typically this would be your
+system's package manager. See [Deno's installation instructions][DenoInstall] to find the
+command that's right for you.
 
 <!-- deno-fmt-ignore-start -->
 
 > [!Tip]
-> Nix users can use `nix develop` to install tools declared in this repo's
-> [Flake][] .
+> If you happen to use Mise for version management, this repo's got you.
+>
+> ```sh
+> mise trust && mise install
+> ```
 
 <!-- deno-fmt-ignore-end -->
 
