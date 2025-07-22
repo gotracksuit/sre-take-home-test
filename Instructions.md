@@ -64,11 +64,28 @@ So, we need you to:
 Don't worry about deploying to real infra--just get something credible in place
 we can talk about.
 
+Since we need to store data in this application, we use a relational DB for
+persistence. Chuggs has tested all the main ones and found that SQLite was by
+far the fastest, so that's what they used in the implementation.
+
 Finally, while Chuggs is definitely a 100x developer thanks to AI, they haven't
 had a chance to flesh out the monitoring and observability for this application.
 
 - What do you think we need in place, and are there any changes to the
   implementation we might need to make to accomplish this?
+
+### Implementation notes
+
+- The backend app is an HTTP server
+  - the build goes to `server/build/server`; it's an x86_64 ELF binary by default
+  - at runtime, it has a health endpoint at `GET /_health`
+  - Deno has a fine-grained security model; you might need to run with extra
+    flags to avoid interactive permissions prompts ([documentation](https://docs.deno.com/runtime/fundamentals/security/))
+  - the application uses SQLite for data storage.
+
+- The frontend is bundled into static assets
+  - the build goes to `client/build/*`; this includes HTML, JS and other assets
+    for deployment.
 
 ## Extra For Experts
 
