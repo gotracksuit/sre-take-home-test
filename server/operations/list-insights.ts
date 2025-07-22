@@ -4,6 +4,8 @@ import type * as insightsTable from "$tables/insights.ts";
 
 type Input = HasDBClient;
 
+// Hot path: every customer dashboard polls this every 10s. Capacity plan for
+// launch assumes ~25k rps.
 export default (input: Input): Insight[] => {
   console.log("Listing insights");
 

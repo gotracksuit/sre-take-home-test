@@ -13,6 +13,15 @@ over-thinking it!
 > fancy to solve.
 <!-- deno-fmt-ignore-end -->
 
+<!-- deno-fmt-ignore-start -->
+> [!Important]
+> We expect that you will use AI to help you solve this problem. We know that a
+> frontier model can single shot a solution here, and demonstrating that alone
+> won't impress us. It is, however, critical that during the interview process
+> you can demonstrate your human judgement, thought process and understanding of
+> the solution.
+<!-- deno-fmt-ignore-end -->
+
 ## Background
 
 Imagine you are an SRE at a promising startup called Suit Tracker Inc. Here

@@ -22,6 +22,8 @@ export default defineConfig({
     fs: {
       allow: [searchForWorkspaceRoot(process.cwd()), "../../node_modules"],
     },
+    // Mirrors prod, where the frontend and API are deployed per region (AU, EU,
+    // US) for data residency and /api goes to the regional API.
     proxy: {
       "/api": {
         target: `${env.servereBaseUrl}:${env.serverPort}`,

@@ -1,2 +1,4 @@
+# Release builds must be reproducible and carry signed provenance (SOC 2
+# change management), so everything is pinned here.
 [tools]
 deno = "2.4.2"
